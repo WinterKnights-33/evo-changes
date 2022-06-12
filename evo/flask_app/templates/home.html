@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='css/styleA.css')}}"/>
+    <title>Dashboard</title>
+</head>
+<body>
+    <div class="wrapper">
+        <div class = "links">
+            <h2 class="header">Welcome, {{user.first_name}}</h2>
+            <div class="head">
+                <a href="/painting/plant" class="intro-button">Add Model</a>
+                <a href="/logout" class="logB">Logout</a>
+            </div>
+                <p class ="head">Models</p>
+        </div>
+        <div class="">
+            <div class="footer">
+                <div class="intro">
+                    <h2>It's all game, let's play!</h2>
+                    <p>Diet controls so much of what we do.  From where we can go to dinner with friends.  To best place to live.  To energy intake and outtake.  Now imagine this, the world has changed and meat is no longer part of the common deit.  Here we will play with how the zygomatic will change, with no need for strength to generate a stronger bite, we see the changes now.</p>
+                    <button class="intro-button" onclick="accept()">LETS GO!</button>
+                </div>
+            </div>
+            <table class="user">
+                <thaed>
+                    {% for painting in paintings %}
+                    <tr>
+                        <th>
+                            <td>
+                                <a href="/painting/veiw/{{painting.id}}">{{painting.title}}</a>
+                            </td>
+                            <td>
+                                by {{user.first_name}}
+                            </td>
+                            <td>
+                                {% if painting.user_id == session.user_id %}
+                                <a href="/painting/delete/{{painting.id}}">delete</a>
+                                <a href="/painting/edit/{{painting.id}}">edit</a>
+                                {% endif %}
+                            </td>
+                        </th>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <script type="text/javascript" src="{{url_for('static',filename='js/script.js')}}"></script>
+</body>
+</html>
