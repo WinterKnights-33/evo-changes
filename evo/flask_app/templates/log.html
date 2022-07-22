@@ -85,3 +85,91 @@
 
 </body>
 </html>
+
+<!--
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='css/login.css')}}"/>
+    <title>Register/Login</title>
+</head>
+
+<body>
+    <div class="bg-img">
+        <div class="">
+            <form action="/register" method="post" class="">
+                <div class="warning">
+                    {% with messages = get_flashed_messages (category_filter=['register']) %}
+                    {% if messages %}
+                    <div class="" role="alert">
+                        <strong>Flash Message</strong>
+                            {% for message in messages %}
+                            <p>{{message}}</p>
+                            {% endfor %}
+                    </div>
+                    {% endif %}
+                    {% endwith %}
+                </div>
+                <div id="regis" class="content-register">
+                    <header>First time on a dig site? That's ok! Let's Register!</header>
+                    <div class="feild space">
+                        <input type="text" class="passkey" required placeholder="First Name" name="first_name" for="first_name" />
+                    </div>
+                    <div class="feild space">
+                        <input type="email" class="passkey" required placeholder="Email" name="email" for="email" />
+                    </div>
+                    <div class="feild space">
+                        <input type="password" class="passkey" required placeholder="Password" name="password" for="password"/>
+                    </div>
+                    <div class="feild space">
+                        <span class="da da-lock"></span>
+                        <input type="password" class="pass-key" required placeholder="Confirm Password" />
+                        <span class="show">SHOW</span>
+                    </div>
+                    <p></p>
+                        <button name="firstnext" class="registerBtn">Register</button>
+                    </p>
+                    <a class="prevBtn" onclick="prev()" >You have an account already? Login Here</a>
+                </form>
+        </div>
+
+        <div id="log" class="content-login">
+            <header>DigIn!</header>
+            <form action="/login" method="POST" class="">
+                <div class="warning">
+                    {% with messages = get_flashed_messages (category_filter=['login']) %}
+                    {% if messages %}
+                    <div class="" role="alert">
+                        <strong>Flash Message</strong>
+                        {% for message in messages %}
+                        <p>{{message}}</p>
+                        {% endfor %}
+                    </div>
+                    {% endif %}
+                    {% endwith %}
+                </div>
+                <div class="feild space">
+                        <input type="email" class="pass-key" required placeholder="Email" for="email" />
+                </div>
+                <div class="feild space">
+                    <span class="da da-lock"></span>
+                    <input type="password" class="pass-key" required placeholder="Password" />
+                    <span class="show">SHOW</span>
+                </div>
+                <p>
+                    <button name="login" class="LoginBtn">DIGIN</button>
+                </p>
+                <a class="nextBtn" onclick="next()" >You don't have an account yet? Register Here</a>
+            </form>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="{{ url_for('static', filename='js/script.js') }}"></script>
+    
+</body>
+</html>
+
+-->

@@ -1,0 +1,175 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700|Poppins:400,500&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    user-select: none;
+}
+
+.bg-img {
+    background: url("archaeologist-funny-illustration-girl-52871254.jpeg");
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+}
+
+.bg-img:after {
+    position: relative;
+    content: "";
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(red, green, blue, alpha);
+}
+
+#log {
+    display: block;
+}
+#regis {
+    display: none;
+}
+
+.content-register, .content-login {
+    border-radius: 10px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 3;
+    text-align: center;
+    padding: 60px 32px;
+    width: 370px;
+    transform: translate(-50%, -50%);
+    background: rgba(255, 255, 255, 0.133);
+    border: 1px solid #fff;
+    backdrop-filter: blur(3px);
+    box-shadow: 0 0 6px 0 rgba(29, 29, 29, 0.203);
+}
+
+.content-register, .content-login header {
+    color: rgb(232, 120, 7);
+    font-size: 18px;
+    font-weight: 900;
+    margin: 0 0 35px 0;
+    text-shadow: 3px 10px 10px #dbaa2f;
+    font-family: 'Courier New', 'Montserrat', Courier, monospace;
+}
+
+.field {
+    position: relative;
+    height: 45px;
+    width: 100%;
+    display: flex;
+    background: rgba(255, 255, 255, 0.94);
+}
+
+.feild span {
+    color: #fff;
+    width: 40px;
+    line-height: 45px;
+}
+
+.feild input {
+    height: 100%;
+    width: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: #222;
+    font-size: 16px;
+    font-family: "Poppins", sans-serif;
+}
+
+.space {
+    margin-top: 16px;
+}
+
+.show {
+    position: absolute;
+    right: 13px;
+    font-size: 13px;
+    font-weight: 700;
+    color: #222;
+    display: none;
+    cursor: pointer;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.pass-key:valid ~ .show {
+    display: block;
+}
+
+.pass {
+    text-align: left;
+    margin: 10px 0;
+}
+
+.pass a {
+    color: white;
+    text-decoration: none;
+    font-family: "Poppins", sans-serif;
+}
+
+.pass:hover a {
+    text-decoration: underline;
+}
+
+.feild input[type="submit"] {
+    background: #682efc;
+    border: 1px solid #7741fd;
+    color: white;
+    font-size: 18px;
+    letter-spacing: 1px;
+    font-weight: 600;
+    cursor: pointer;
+    font-family: 'Courier New', Courier, monospace;
+    transition: .3s ease;
+}
+
+.feild input[type="submit"]:hover {
+    background: #4a0de4f5;
+}
+
+.login {
+    color: wheat;
+    margin: 20px 0;
+    font-family: "Poppins", 'Courier New', Courier, monospace;
+}
+
+i span {
+    margin-left: 8px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    font-size: 16px;
+    font-family: "Poppins", sans-serif;
+}
+
+.registerBtn, .LoginBtn, .nextBtn, .prevBtn {
+    background-color: #c53c0e;
+    border-radius: 100px;
+    box-shadow: rgb(251, 217, 48) 0 -25px 18px -14px inset,rgba(251, 217, 48) 0 1px 2px,rgba(251, 217, 48) 0 2px 4px,rgb(225, 192, 24) 0 4px 8px,rgb(206, 173, 8) 0 8px 16px,rgb(238, 207, 48) 0 16px 32px;
+    color: rgb(128, 38, 0);
+    cursor: pointer;
+    display: inline-block;
+    font-family: CerebriSans-Regular,-apple-system,system-ui,Roboto,sans-serif;
+    padding: 7px 10px;
+    text-align: center;
+    text-decoration: none;
+    transition: all 250ms;
+    border: 0;
+    font-size: 10px;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+}
+
+.registerBtn:hover, .LoginBtn:hover, .nextBtn:hover, .prevBtn:hover {
+
+    box-shadow: rgba(240, 120, 7, 0.768) 0 -25px 18px -14px inset,rgba(210, 103, 3, 0.991) 0 1px 2px,rgba(240, 135, 7, 0.923) 0 2px 4px,rgba(255, 139, 31, 0.768) 0 4px 8px,rgba(194, 97, 0, 0.93) 0 8px 16px,rgba(240, 120, 7, 0.768) 0 16px 32px;
+    transform: scale(1.05) rotate(-2.25deg);
+}
+
+a, .LoginBtn, .registerBtn {
+    margin-top: 20px;
+}

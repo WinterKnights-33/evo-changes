@@ -43,6 +43,7 @@ class User:
         query = "SELECT * FROM users WHERE id = %(id)s;"
         results = connectToMySQL(cls.db).query_db(query,data)
         return cls(results[0])
+    #add type saftey
 
     @classmethod
     def get_w_email(cls,data):
